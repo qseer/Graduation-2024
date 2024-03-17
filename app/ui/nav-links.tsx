@@ -2,8 +2,8 @@
  * @Author: zhang_quan
  * @Date: 2024-03-14 21:49:37
  * @LastEditors: qseer 951738367@qq.com
- * @LastEditTime: 2024-03-14 23:55:55
- * @FilePath: \nextjs-dashboard\app\ui\dashboard\nav-links.tsx
+ * @LastEditTime: 2024-03-17 20:34:46
+ * @FilePath: \nextjs-dashboard\app\ui\nav-links.tsx
  * @Description:
  * Copyright (c) 2024 by TWT, All Rights Reserved.
  */
@@ -20,13 +20,13 @@ import clsx from 'clsx';
 // Map of links to display in the side navigation.
 // Depending on the size of the application, this would be stored in a database.
 const links = [
-  { name: 'Home', href: '/dashboard', icon: HomeIcon },
+  { name: 'Home', href: '/', icon: HomeIcon },
   {
-    name: 'Invoices',
-    href: '/dashboard/invoices',
+    name: 'Post',
+    href: '/post',
     icon: DocumentDuplicateIcon,
   },
-  { name: 'Customers', href: '/dashboard/customers', icon: UserGroupIcon },
+  { name: 'Users', href: '/users', icon: UserGroupIcon },
 ];
 
 export default function NavLinks() {
@@ -40,7 +40,7 @@ export default function NavLinks() {
             key={link.name}
             href={link.href}
             className={clsx(
-              'flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3',
+              'flex h-[48px] grow items-center justify-center gap-2 rounded-md p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600',
               {
                 'bg-sky-100 text-blue-600': pathname === link.href,
               },

@@ -1,3 +1,12 @@
+/*
+ * @Author: zhang_quan
+ * @Date: 2024-03-14 21:49:37
+ * @LastEditors: qseer 951738367@qq.com
+ * @LastEditTime: 2024-03-17 19:24:38
+ * @FilePath: \nextjs-dashboard\app\login\page.tsx
+ * @Description: 
+ * Copyright (c) 2024 by TWT, All Rights Reserved. 
+ */
 import { lusitana } from '@/app/ui/fonts';
 import {
   AtSymbolIcon,
@@ -5,7 +14,7 @@ import {
   ExclamationCircleIcon,
 } from '@heroicons/react/24/outline';
 import { ArrowRightIcon } from '@heroicons/react/20/solid';
-import { Button } from './button';
+import { Button } from '@/app/ui/button';
 
 export default function LoginForm() {
   return (
