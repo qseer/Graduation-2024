@@ -2,19 +2,20 @@
  * @Author: zhang_quan
  * @Date: 2024-03-14 21:49:37
  * @LastEditors: qseer 951738367@qq.com
- * @LastEditTime: 2024-03-17 16:59:16
+ * @LastEditTime: 2024-03-17 17:08:24
  * @FilePath: \nextjs-dashboard\tailwind.config.ts
- * @Description: 
- * Copyright (c) 2024 by TWT, All Rights Reserved. 
+ * @Description:
+ * Copyright (c) 2024 by TWT, All Rights Reserved.
  */
 import type { Config } from 'tailwindcss';
-import {nextui} from "@nextui-org/react";
+import { nextui } from '@nextui-org/react';
 
 const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
