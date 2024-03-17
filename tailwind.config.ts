@@ -1,4 +1,14 @@
+/*
+ * @Author: zhang_quan
+ * @Date: 2024-03-14 21:49:37
+ * @LastEditors: qseer 951738367@qq.com
+ * @LastEditTime: 2024-03-17 16:59:16
+ * @FilePath: \nextjs-dashboard\tailwind.config.ts
+ * @Description: 
+ * Copyright (c) 2024 by TWT, All Rights Reserved. 
+ */
 import type { Config } from 'tailwindcss';
+import {nextui} from "@nextui-org/react";
 
 const config: Config = {
   content: [
@@ -27,6 +37,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [require('@tailwindcss/forms'), nextui()],
 };
 export default config;

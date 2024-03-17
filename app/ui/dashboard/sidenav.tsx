@@ -1,3 +1,12 @@
+/*
+ * @Author: zhang_quan
+ * @Date: 2024-03-14 21:49:37
+ * @LastEditors: qseer 951738367@qq.com
+ * @LastEditTime: 2024-03-17 16:22:29
+ * @FilePath: \nextjs-dashboard\app\ui\dashboard\sidenav.tsx
+ * @Description: 
+ * Copyright (c) 2024 by TWT, All Rights Reserved. 
+ */
 import Link from 'next/link';
 import NavLinks from '@/app/ui/dashboard/nav-links';
 import AcmeLogo from '@/app/ui/acme-logo';
@@ -10,7 +19,7 @@ export default function SideNav() {
         className="mb-2 flex h-20 items-end justify-start rounded-md bg-blue-600 p-4 md:h-40"
         href="/"
       >
-        <div className="w-32 text-white md:w-40">
+        <div className="w-32 text-white md:w-40 bg-yellow-300">
           <AcmeLogo />
         </div>
       </Link>
