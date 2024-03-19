@@ -2,7 +2,7 @@
  * @Author: zhang_quan
  * @Date: 2024-03-14 21:49:37
  * @LastEditors: qseer 951738367@qq.com
- * @LastEditTime: 2024-03-17 21:02:32
+ * @LastEditTime: 2024-03-19 17:31:01
  * @FilePath: \nextjs-dashboard\app\post\page.tsx
  * @Description:
  * Copyright (c) 2024 by TWT, All Rights Reserved.
@@ -19,13 +19,13 @@ export default function Page() {
   const title = '发布笔记'
   return (
     <div>
-      <Header>{title}</Header>
+      <Header type="post">{title}</Header>
       <Textarea
         label="Description"
         placeholder="Enter your description"
         className="p-5"
       />
-      <Image className="w-20" src="/images/sample.png"></Image>
+      <Image className="w-20" src="/images/pc_camera.icon.svg"></Image>
     </div>
   );
 }

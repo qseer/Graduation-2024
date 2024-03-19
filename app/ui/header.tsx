@@ -2,7 +2,7 @@
  * @Author: zhang_quan
  * @Date: 2024-03-10 21:27:50
  * @LastEditors: qseer 951738367@qq.com
- * @LastEditTime: 2024-03-17 21:00:17
+ * @LastEditTime: 2024-03-19 17:32:02
  * @FilePath: \nextjs-dashboard\app\ui\header.tsx
  * @Description:
  * Copyright (c) 2024 by TWT, All Rights Reserved.
@@ -18,7 +18,39 @@ import {
   Button,
 } from '@nextui-org/react';
 
-export default function Header({ children }: { children: React.ReactNode }) {
+export default function Header({
+  children,
+  type,
+}: {
+  children: React.ReactNode;
+  type: string;
+}) {
+  // const tmp;
+  let tmp2 = (
+    <NavbarContent justify="end">
+      <NavbarItem className="hidden md:block lg:flex">
+        <Link href="#">Sign in</Link>
+      </NavbarItem>
+      <NavbarItem>
+        <Button as={Link} color="primary" href="/login" variant="flat">
+          Login
+        </Button>
+      </NavbarItem>
+    </NavbarContent>
+  );
+  if (type == 'content' || type == 'post')
+    tmp2 = (
+      <NavbarContent justify="end">
+        <NavbarItem className="hidden md:block lg:flex">
+          {/* <Link href="#">Sign in</Link> */}
+        </NavbarItem>
+        <NavbarItem>
+          {/* <Button as={Link} color="primary" href="/login" variant="flat">
+            Login
+          </Button> */}
+        </NavbarItem>
+      </NavbarContent>
+    );
   return (
     <Navbar isBordered>
       <NavbarBrand>
@@ -31,16 +63,7 @@ export default function Header({ children }: { children: React.ReactNode }) {
           <Link href="#"> {children}</Link>
         </NavbarItem>
       </NavbarContent>
-      <NavbarContent justify="end">
-        <NavbarItem className="hidden md:block lg:flex">
-          <Link href="#">Sign in</Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} color="primary" href="/login" variant="flat">
-            Login
-          </Button>
-        </NavbarItem>
-      </NavbarContent>
+      {tmp2}
     </Navbar>
   );
 }

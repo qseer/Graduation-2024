@@ -1,0 +1,234 @@
+{
+  "info": {
+    "_postman_id": "ec662802-b1e8-4961-b49f-f69da47c0d72",
+    "name": "03-09测试",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+    "_exporter_id": "19999372",
+    "_collection_link": "https://crimson-desert-306659.postman.co/workspace/%E6%B5%8B%E8%AF%95%E7%94%A8~c545807f-d6ef-42d5-9e8c-85d043210eb7/collection/19999372-ec662802-b1e8-4961-b49f-f69da47c0d72?action=share&source=collection_link&creator=19999372"
+  },
+  "item": [
+    {
+      "name": "用户表相关",
+      "item": [
+        {
+          "name": "添加用户信息",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"username\":\"张三\",\r\n    \"password\":\"123123\",\r\n    \"avatar\":\"头像链接\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://127.0.0.1:8087/pub/users/addUser"
+          },
+          "response": []
+        },
+        {
+          "name": "通过客户端代码获取到的用户code一键登录，无账号自动注册默认密码为123123",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"wxCode\":\"0b3cJt0w3d3Dn23rCz1w3N9dov4cJt0P\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://127.0.0.1:8087/pub/users/wxLogin"
+          },
+          "response": []
+        },
+        {
+          "name": "修改用户，密码或头像不传不修改",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\":\"2\",\r\n    \"password\":\"123\",\r\n    \"avatar\":\"头像1\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://127.0.0.1:8087/pub/users/update"
+          },
+          "response": []
+        },
+        {
+          "name": "用户名密码登录",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"username\":\"王小二\",\r\n    \"password\":\"123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://127.0.0.1:8087/pub/users/loginByPwd"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "弹幕记录",
+      "item": [
+        {
+          "name": "新增弹幕",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\":2,\r\n    \"postId\":1,\r\n    \"barrageContent\":\"弹幕内容\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://127.0.0.1:8087/pub/barrages/add"
+          },
+          "response": []
+        },
+        {
+          "name": "修改弹幕",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"barrageId\":1,\r\n    \"barrageContent\":\"内容11\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://127.0.0.1:8087/pub/barrages/edit"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "帖子",
+      "item": [
+        {
+          "name": "新增帖子",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\":2,\r\n    \"postContent\":\"帖子内容\",\r\n    \"postImage\":\"帖子图片链接\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://127.0.0.1:8087/pub/posts/add"
+          },
+          "response": []
+        },
+        {
+          "name": "修改帖子",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"postId\":1,\r\n    \"postContent\":\"帖子内容11\",\r\n    \"postImage\":\"帖子图片链接11\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://127.0.0.1:8087/pub/posts/edit"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "分享",
+      "item": [
+        {
+          "name": "新增分享",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\":2,\r\n    \"postId\":\"1\",\r\n    \"sharePlatform\":\"微信\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://127.0.0.1:8087/pub/shares/add"
+          },
+          "response": []
+        },
+        {
+          "name": "修改分享",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"shareId\":1,\r\n    \"sharePlatform\":\"QQ\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://127.0.0.1:8087/pub/shares/edit"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "加油记录",
+      "item": [
+        {
+          "name": "新增 加油记录",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\":2,\r\n    \"postId\":\"1\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://127.0.0.1:8087/pub/cheers/add"
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

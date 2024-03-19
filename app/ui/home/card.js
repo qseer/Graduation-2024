@@ -2,12 +2,13 @@
  * @Author: zhang_quan
  * @Date: 2024-03-12 10:54:21
  * @LastEditors: qseer 951738367@qq.com
- * @LastEditTime: 2024-03-17 20:31:46
+ * @LastEditTime: 2024-03-19 17:04:30
  * @FilePath: \nextjs-dashboard\app\ui\home\card.js
  * @Description:
  * Copyright (c) 2024 by TWT, All Rights Reserved.
  */
 import React from "react";
+import Link from 'next/link';
 import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 
 export default function App() {
@@ -61,6 +62,7 @@ export default function App() {
       {/* 前 3 名 */}
       <div className="grid grid-cols-3 gap-3 justify-items-center">
         {list.map((item, index) => (
+          <Link href="/content">
           <Card
             className="inline-block"
             shadow="sm"
@@ -82,6 +84,7 @@ export default function App() {
               <p className="text-default-500">{item.price}</p>
             </CardFooter>
           </Card>
+          </Link>
         ))}
       </div>
       <p>推荐图文</p>

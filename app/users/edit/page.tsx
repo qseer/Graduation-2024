@@ -2,7 +2,7 @@
  * @Author: zhang_quan
  * @Date: 2024-03-17 16:29:42
  * @LastEditors: qseer 951738367@qq.com
- * @LastEditTime: 2024-03-17 21:23:08
+ * @LastEditTime: 2024-03-17 21:25:00
  * @FilePath: \nextjs-dashboard\app\users\edit\page.tsx
  * @Description:
  * Copyright (c) 2024 by TWT, All Rights Reserved.
@@ -25,9 +25,15 @@ export default function App() {
     <div className="max-w-md">
       <div className="space-y-1">
         <h4 className="text-medium font-medium">编辑资料</h4>
-        <p className="text-small text-default-400">
-          Beautiful, fast and modern React UI library.
-        </p>
+      </div>
+      <Divider className="my-4" />
+
+      <div className="space-y-1">
+        <h4 className="text-medium font-medium">头像</h4>
+      </div>
+      <Divider className="my-4" />
+      <div className="space-y-1">
+        <h4 className="text-medium font-medium">昵称</h4>
       </div>
       <Divider className="my-4" />
       <div className="text-small flex h-5 items-center space-x-4">
