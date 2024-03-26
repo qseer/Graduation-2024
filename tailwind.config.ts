@@ -2,7 +2,7 @@
  * @Author: zhang_quan
  * @Date: 2024-03-14 21:49:37
  * @LastEditors: qseer 951738367@qq.com
- * @LastEditTime: 2024-03-17 18:57:58
+ * @LastEditTime: 2024-03-24 21:34:39
  * @FilePath: \nextjs-dashboard\tailwind.config.ts
  * @Description:
  * Copyright (c) 2024 by TWT, All Rights Reserved.
@@ -29,6 +29,7 @@ const config: Config = {
           600: '#2F6FEB',
         },
         'back-blue': '#e5fed4', 
+        'cardblue': '#46d1c8'
       },
     },
     keyframes: {

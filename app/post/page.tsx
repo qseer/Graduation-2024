@@ -2,11 +2,12 @@
  * @Author: zhang_quan
  * @Date: 2024-03-14 21:49:37
  * @LastEditors: qseer 951738367@qq.com
- * @LastEditTime: 2024-03-19 17:31:01
+ * @LastEditTime: 2024-03-26 10:07:43
  * @FilePath: \nextjs-dashboard\app\post\page.tsx
  * @Description:
  * Copyright (c) 2024 by TWT, All Rights Reserved.
  */
+'use client'
 import AcmeLogo from '@/app/ui/acme-logo';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
@@ -26,6 +27,8 @@ export default function Page() {
         className="p-5"
       />
       <Image className="w-20" src="/images/pc_camera.icon.svg"></Image>
+      <input type='file'></input>
+      {/* <input type='submit' onClick={() => {alert('已发布')}}></input> */}
     </div>
   );
 }

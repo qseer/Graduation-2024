@@ -2,7 +2,7 @@
  * @Author: zhang_quan
  * @Date: 2024-03-10 21:27:50
  * @LastEditors: qseer 951738367@qq.com
- * @LastEditTime: 2024-03-19 17:32:02
+ * @LastEditTime: 2024-03-26 10:19:32
  * @FilePath: \nextjs-dashboard\app\ui\header.tsx
  * @Description:
  * Copyright (c) 2024 by TWT, All Rights Reserved.
@@ -44,11 +44,20 @@ export default function Header({
         <NavbarItem className="hidden md:block lg:flex">
           {/* <Link href="#">Sign in</Link> */}
         </NavbarItem>
-        <NavbarItem>
-          {/* <Button as={Link} color="primary" href="/login" variant="flat">
-            Login
-          </Button> */}
-        </NavbarItem>
+        {type == 'content' ? (''
+        ) : (
+          <NavbarItem>
+            <Button
+              color="primary"
+              variant="flat"
+              onClick={() => {
+                alert('已发布');
+              }}
+            >
+              发布
+            </Button>
+          </NavbarItem>
+        )}
       </NavbarContent>
     );
   return (
