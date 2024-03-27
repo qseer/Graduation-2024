@@ -19,7 +19,7 @@ export default function Page() {
   const title = '「旧照翻拍」毕业季活动'
   return (
     <div>
-      <Header>{title}</Header>
+      <Header type='home'>{title}</Header>
       <div className="flex justify-center">
         <Image
           width={500}
