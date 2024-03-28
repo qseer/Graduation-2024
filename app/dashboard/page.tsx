@@ -2,7 +2,7 @@
  * @Author: zhang_quan
  * @Date: 2024-03-14 23:17:54
  * @LastEditors: qseer 951738367@qq.com
- * @LastEditTime: 2024-03-16 23:09:03
+ * @LastEditTime: 2024-03-28 11:35:04
  * @FilePath: \nextjs-dashboard\app\dashboard\page.tsx
  * @Description:
  * Copyright (c) 2024 by TWT, All Rights Reserved.
@@ -17,13 +17,6 @@ import { isConstructorDeclaration } from 'typescript';
 // import { fetchRevenue } from '@/app/lib/data';
 
 async function getData() {
-  // await axios.get('http://localhost:5000/stus').then(result => {
-  //   console.log(result.data)
-  //   const {data} = result
-  //   return data
-  // })
-  // The return value is *not* serialized
-  // You can return Date, Map, Set, etc.
   const res = await fetch('http://localhost:5000/stus')
     .then((response) => {
       if (!response.ok) {
