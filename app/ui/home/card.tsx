@@ -2,7 +2,7 @@
  * @Author: zhang_quan
  * @Date: 2024-03-12 10:54:21
  * @LastEditors: qseer 951738367@qq.com
- * @LastEditTime: 2024-03-29 10:34:40
+ * @LastEditTime: 2024-03-29 11:10:19
  * @FilePath: \nextjs-dashboard\app\ui\home\card.tsx
  * @Description:
  * Copyright (c) 2024 by TWT, All Rights Reserved.
@@ -11,7 +11,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Card, CardBody, CardFooter, Image } from '@nextui-org/react';
 
-export default function App({ posts }: { posts: Array<Object> }) {
+export default function App({ posts }: { posts: Array<any> }) {
   const list = posts;
   // console.log('posts', posts);
   const list1 = [
