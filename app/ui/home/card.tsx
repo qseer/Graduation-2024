@@ -2,7 +2,7 @@
  * @Author: zhang_quan
  * @Date: 2024-03-12 10:54:21
  * @LastEditors: qseer 951738367@qq.com
- * @LastEditTime: 2024-03-28 22:42:21
+ * @LastEditTime: 2024-03-29 10:34:40
  * @FilePath: \nextjs-dashboard\app\ui\home\card.tsx
  * @Description:
  * Copyright (c) 2024 by TWT, All Rights Reserved.
@@ -105,12 +105,12 @@ export default function App({ posts }: { posts: Array<Object> }) {
                 width="100%"
                 alt={item.title}
                 className="w-full object-cover"
-                src={item.img}
+                src="/images/sample.png"
               />
             </CardBody>
             <CardFooter className="justify-between text-small">
-              <b>{item.title}</b>
-              <p className="text-default-500">{item.price}</p>
+              <b>sample image</b>
+              <p className="text-default-500">❤️ XX</p>
             </CardFooter>
           </Card>
         ))}

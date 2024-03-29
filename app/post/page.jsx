@@ -9,7 +9,7 @@ import { Button } from '@/app/ui/button';
 
 export default function LoginForm() {
     // const success = 0
-  async function createInvoice(formData: FormData) {
+  async function createInvoice(formData) {
     'use server';
     // console.log(formData);
     const rawFormData = {
@@ -56,7 +56,7 @@ export default function LoginForm() {
     <form className="space-y-3" action={createInvoice}>
       <div className="flex-1 rounded-lg bg-gray-50 px-6 pb-4 pt-8">
         <h1 className={`${lusitana.className} mb-3 text-2xl`}>
-          Please log in to continue.
+          Please input your post information.
         </h1>
         <div className="w-full">
           <div className="mt-4">
@@ -72,7 +72,7 @@ export default function LoginForm() {
                 id="password"
                 type="text"
                 name="userId"
-                placeholder="Enter your image path"
+                placeholder="Enter your userId, recommend 4"
                 required
                 // minLength={6}
               />
